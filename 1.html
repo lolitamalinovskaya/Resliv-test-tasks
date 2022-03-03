@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style> .red {color: red;}</style>
+</head>
+<body>
+<input type="text" name="name" id="name_input" value="Xxxx">
+<script>
+    let input = document.querySelector('#name_input');
+    let value = input.getAttribute('value');
+
+    input.oninput = () => {
+        input.value !== value ?
+            input.classList.add('red') :
+            input.classList.remove('red');
+    };
+</script>
+</body>
+</html>

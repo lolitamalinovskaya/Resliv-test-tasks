@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    try {
+        const getAllRequests = async () => {
+            const responseFirst = await fetch('https://rickandmortyapi.com/api/character/201');
+            const responseSecond = await fetch('https://rickandmortyapi.com/api/episode/10');
+            if (responseFirst.status === 200 && responseSecond.status === 200) {
+                console.log("Получены оба ответа");
+            }
+        }
+
+        getAllRequests();
+    } catch (error) {
+        console.log(error);
+    }
+</script>
+</body>
+</html>
